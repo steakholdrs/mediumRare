@@ -20,9 +20,7 @@ Pulse.insert({
      status: 1
 });
 
-<<<<<<< Updated upstream
-}
-=======
+
 Capacity.insert({
     name:"Alex",
     planned:"80",
@@ -46,4 +44,5 @@ Capacity.insert({
     planned:"80",
     actual:"140"
 })
->>>>>>> Stashed changes
+
+}
