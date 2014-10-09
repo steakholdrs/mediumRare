@@ -10,4 +10,11 @@ Template.pulse.helpers({
   getSad: function() {
     return Pulse.find({status: 3});
   }
+
+});
+
+Template.pulse.events({
+	'click .feels' : function(e, t) {
+		alert(this.pulse);
+	}
 });
