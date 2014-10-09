@@ -1,12 +1,49 @@
 <template name="pulse">
-<p> Happy </p>
+<h1> Happy </h1>
 {{#each getHappy}}
  {{> happyPeople}}
 {{/each}}
+
+<h1> Normal </h1>
+{{#each getNormal}}
+{{> happyPeople}}
+{{/each}}
+
+<h1> Sad </h1>
+<div class="col-md-9">
+       <table class="table table-list-search">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+        {{#each getSad}}
+        {{> sadPeople}}
+        {{/each}}
+            </tbody>
+        </table>   
+  </div>
 </template>
 
+
+
 <template name="happyPeople">
-<p>{{userName}} - {{status}}</p>
+<i class="fa fa-meh-o fa-5x"></i> <p>{{userName}} - {{status}}</p>
+</template>
 
+<template name="normalPeople">
 
+<p>
+  <i class="fa fa-meh-o fa-5x"></i>
+  {{userName}} - {{status}}
+</p>
+</template>
+
+<template name="sadPeople">
+                <tr>
+                    <td>{{userName}}</td>
+                    <td><i class="fa fa-frown-o fa-5x"></i></td>
+                </tr>
 </template>
