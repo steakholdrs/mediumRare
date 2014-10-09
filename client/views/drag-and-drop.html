@@ -1,19 +1,22 @@
 <template name="canvas">
     <div class="row">
         <div class="padded col-sm-2">
-            <div id="leftPanel" class="unselectable dragdropzone padded panel panel-default">
-                <div id="redPanel" class="dragDropBlock red padded draggable panel block panel-default">
-                    red
-                </div>
-                <div id="greenPanel" class="dragDropBlock green padded draggable panel block panel-default">
-                    green
-                </div>
-                <div id="bluePanel" class="dragDropBlock blue padded draggable panel block panel-default">
-                    blue
+            <div id="sidebar">
+                <div id="leftPanel" class="unselectable dragdropzone padded panel panel-default">
+                    <div id="redPanel" class="dragDropBlock red padded draggable panel block panel-default">
+                        red
+                    </div>
+                    <div id="greenPanel" class="dragDropBlock green padded draggable panel block panel-default">
+                        green
+                    </div>
+                    <div id="bluePanel" class="dragDropBlock blue padded draggable panel block panel-default">
+                        blue
+                    </div>
                 </div>
             </div>
+
         </div>
-        <div class="col-sm-10 padded">
+        <div id="main" class="col-sm-10 padded">
             <div id="rightPanel" class="unselectable panel panel-default padded ">
                     <div class="row">
                         <div id="grid1" class="unselectable dragdropzone  panel panel-default padded col-sm-6"><p>Box 1</p></div>

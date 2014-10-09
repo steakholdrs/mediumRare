@@ -49,3 +49,4 @@ Template.canvas.getMouseMoveId = function(){
     return "...";
   }
 }
+

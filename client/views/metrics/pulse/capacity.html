@@ -1,0 +1,42 @@
+<template name="capacity">
+
+    <div class="span7">
+        <div class="widget stacked widget-table action-table">
+
+            <div class="widget-header">
+                <i class="icon-th-list"></i>
+                <h3>Capacity</h3>
+            </div> <!-- /widget-header -->
+
+            <div class="widget-content">
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each getCapacity}}
+                    {{> captable}}
+                    {{/each}}
+                    </tbody>
+                </table>
+
+            </div> <!-- /widget-content -->
+
+        </div> <!-- /widget -->
+    </div>
+    </template>
+
+
+    <template name="captable">
+        <tr>
+            <td>{{name}}</td>
+            <td>{{planned}}</td>
+            <td>{{actual}}</td>
+        </tr>
+    </template>
