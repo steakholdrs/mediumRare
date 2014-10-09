@@ -10,8 +10,8 @@ iron:router
 mizzao:bootstrap-3
 ian:accounts-ui-bootstrap-3
 accounts-password
-jquery
+awatson1978:session-extended-api
 mrt:jquery-ui
 less
-awatson1978:session-extended-api
+jquery
 
