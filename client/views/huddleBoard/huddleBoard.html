@@ -1,4 +1,15 @@
 <template name="huddleBoard">
-test
+ <div class="row">
+    <div class="padded col-sm-12">
+      <div id="rightPanel" class="unselectable dragdropzone padded panel panel-default">
+	      {{#each metrics}}
+	      	<div id="box" class="{{color}} padded draggable panel block panel-default">
+	      		{{> pulse}}
+	        </div>
+	      {{/each}}
+      </div>
+    </div>
+
+  </div>
 
 </template>

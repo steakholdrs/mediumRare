@@ -3,10 +3,6 @@ Session.setDefault('mouseMoveElementId', 'Hello Dropzones!');
 Session.setDefault('mouseMoveX', 0);
 Session.setDefault('mouseMoveY', 0);
 
-Template.canvas.greeting = function () {
-  return "Welcome to drag-and-drop.";
-};
-
 Template.canvas.rendered = function(){
   $(document).mousemove(function (e) {
      Session.set('movedElementId', e.target.id);
@@ -29,6 +25,18 @@ Template.canvas.rendered = function(){
       $('#' + Session.get('movedElementId')).appendTo("#" + this.id);
       $('#' + Session.get('movedElementId')).css('top', '0');
       $('#' + Session.get('movedElementId')).css('left', '0');
+      
+      /* change this later, just to start out to test board saving */
+      var tblColor = "";
+      if (Session.get('movedElementId') == "redPanel") {tblColor="red"}
+      else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"}
+      else {tblColor="green"}
+      Metrics.insert({color: tblColor });
+      $('#' + Session.get('movedElementId')).css('top', '0');
+      $('#' + Session.get('movedElementId')).css('left', '0');
+
+      /* --------------------- */
+
       Session.clear('movedElementId');
     }
   });
