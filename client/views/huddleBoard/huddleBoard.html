@@ -1,15 +1,47 @@
 <template name="huddleBoard">
- <div class="row">
-    <div class="padded col-sm-12">
-      <div id="rightPanel" class="unselectable dragdropzone padded panel panel-default">
-	      {{#each metrics}}
-	      	<div id="box" class="{{color}} padded draggable panel block panel-default">
-	      		{{> pulse}}
-	        </div>
-	      {{/each}}
-      </div>
-    </div>
+	<div class="row">
+		<div class="padded col-sm-12">
+			<div id="rightPanel" class="unselectable dragdropzone padded panel panel-default">
+				<div class="row">
+					<div id="grid1" class="unselectable dragdropzone  panel panel-default padded col-sm-6"><p>Box 1</p>
+						{{#each metricsGrid1}}
+						<div id="box" class="{{color}} padded draggable panel block panel-default">
+							{{> pulse}}
+						</div>
+						{{/each}}
+					</div>
+					<div id="grid2" class="unselectable dragdropzone  panel panel-default padded col-sm-6"><p>Box 2</p>
+						{{#each metricsGrid2}}
+						<div id="box" class="{{color}} padded draggable panel block panel-default">
+							{{> pulse}}
+						</div>
+						{{/each}}
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div id="grid3" class="unselectable dragdropzone  panel panel-default padded col-sm-6"><p>Box 3</p>
+						{{#each metricsGrid3}}
+						<div id="box" class="{{color}} padded draggable panel block panel-default">
+							{{> pulse}}
+						</div>
+						{{/each}}
+					</div>
+					<div class="clearfix visible-md-block"></div>
+					<div id="grid4" class="unselectable dragdropzone  panel panel-default padded col-sm-6"><p>Box 4</p>
+						{{#each metricsGrid4}}
+						<div id="box" class="{{color}} padded draggable panel block panel-default">
+							{{> pulse}}
+						</div>
+						{{/each}}
+					</div>
+					<div class="clearfix visible-md-block"></div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="clearfix visible-lg-block"></div>
 
-  </div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
 
 </template>
