@@ -59,20 +59,20 @@
 <template name="happyPeople">
 	<tr>
         <td>{{userName}}</td>
-        <td><i class="fa fa-smile-o fa-5x"></i></td>
+        <td class="feels"><i class={{status}}></i></td>
     </tr>
 </template>
 
 <template name="normalPeople">
 	<tr>
         <td>{{userName}}</td>
-        <td><i class="fa fa-meh-o fa-5x"></i></td>
+        <td class="feels"><i class={{status}}></i></td>
     </tr>
 </template>
 
 <template name="sadPeople">
     <tr>
         <td>{{userName}}</td>
-        <td><i class="fa fa-frown-o fa-5x"></i></td>
+        <td class="feels"><i class={{status}}></i></td>
     </tr>
 </template>
