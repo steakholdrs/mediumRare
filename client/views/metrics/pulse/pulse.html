@@ -1,0 +1,12 @@
+<template name="pulse">
+<p> Happy </p>
+{{#each getHappy}}
+ {{> happyPeople}}
+{{/each}}
+</template>
+
+<template name="happyPeople">
+<p>{{userName}} - {{status}}</p>
+
+
+</template>
