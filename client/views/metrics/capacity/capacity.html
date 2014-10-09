@@ -19,7 +19,7 @@
 
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tablebody">
                     {{#each getCapacity}}
                     {{> captable}}
                     {{/each}}
@@ -36,7 +36,7 @@
     <template name="captable">
         <tr>
             <td>{{name}}</td>
-            <td>{{planned}}</td>
-            <td>{{actual}}</td>
+            <td class="planned">{{planned}}</td>
+            <td class="actual">{{actual}}</td>
         </tr>
     </template>

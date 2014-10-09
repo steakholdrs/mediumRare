@@ -15,3 +15,5 @@ Template.huddleBoard.helpers({
     	return Metrics.find({grid: "grid4"});
   	}
 });
+
+$
