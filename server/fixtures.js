@@ -1,3 +1,5 @@
+if (Pulse.find().count() === 0) {
+
 Pulse.insert({
      userName: "Marius",
      status: 3
@@ -17,3 +19,5 @@ Pulse.insert({
      userName: "Alex",
      status: 1
 });
+
+}
