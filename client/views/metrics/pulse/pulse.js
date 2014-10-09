@@ -18,3 +18,10 @@ Template.pulse.events({
 		//alert(this.emotion);
 	}
 });
+
+Template.pulse.events({
+	'click a' : function(e) {
+		var tar = e.target.className;
+		Pulse.update(this._id, {$set: {emotion: tar}});
+	}
+});
