@@ -28,11 +28,12 @@ Template.canvas.rendered = function(){
       
       /* change this later, just to start out to test board saving */
       var tblColor = "";
-      if (Session.get('movedElementId') == "redPanel") {tblColor="red"}
-      else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"}
-      else if (Session.get('movedElementId') == "yellowPanel") {tblColor="yellow"}
-      else {tblColor="green"}
-      Metrics.insert({grid: this.id, color: tblColor });
+      var metric = "";
+      if (Session.get('movedElementId') == "redPanel") {tblColor="red"; metric="/pulse"}
+      else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"; metric="/capacity"}
+      else if (Session.get('movedElementId') == "yellowPanel") {tblColor="yellow"; metric="/announcements"}
+      else {tblColor="green"; metric="/calendar"}
+      Metrics.insert({grid: this.id, color: tblColor, url: metric });
       $('#' + Session.get('movedElementId')).css('top', '0');
       $('#' + Session.get('movedElementId')).css('left', '0');
 
