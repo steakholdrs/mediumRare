@@ -11,10 +11,10 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav topButtons">
-            <li id="createHuddleLink" class="active"><a href="/">Create Board</a></li>
-            <li id="viewHuddleLink"><a href="/huddleBoard">View Board</a></li>
+            <li id="canvas" class="active"><a href="/canvas">Create Board</a></li>
+            <li id="huddleBoard"><a href="/huddleBoard">View Board</a></li>
             {{#each getLinks}}
-                <li><a href="/{{url}}">{{linkName}}</a></li>
+                <li id="{{url}}"><a href="/{{url}}">{{linkName}}</a></li>
             {{/each}}
         </ul>
         <ul class="nav navbar-nav navbar-right">
