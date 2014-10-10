@@ -1,111 +1,148 @@
 <template name="pulse">
-<h1 style="color:white"> Team Pulse </h1>
-<div class="row">
-<div class="col-md-11.7 pulseBackground">
-	<h1> Happy </h1>
-   <table class="table table-list-search">
-        <thead>
-            <tr>
-                <th><h3>Name</h3></th>
-                <th><h3>Status</h3></th>
-            </tr>
-        </thead>
-        <tbody>
-	        {{#each getHappy}}
-	        {{> happyPeople}}
-	        {{/each}}
-        </tbody>
-    </table>   
-</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading c-list">
+						<span class="title"> <h4>Happy</h4></span>
 
+					</div>
 
-<div class="col-md-11.7 pulseBackground">
-	<h1> Normal </h1>
-   <table class="table table-list-search">
-        <thead>
-            <tr>
-                <th><h3>Name</h3></th>
-                <th><h3>Status</h3></th>
-            </tr>
-        </thead>
-        <tbody>
-	        {{#each getNormal}}
-	        {{> normalPeople}}
-	        {{/each}}
-        </tbody>
-    </table>   
-</div>
+					<div class="row" style="display: none;">
+						<div class="col-xs-12">
+							<div class="input-group c-search">
+								<input type="text" class="form-control" id="contact-list-search">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
+								</span>
+							</div>
+						</div>
+					</div>
 
+					<ul class="list-group" id="contact-list">
+						{{#each getHappy}}
+						{{> happyPeople}}
+						{{/each}}                   
 
-<div class="col-md-11.7 pulseBackground">
-	<h1> Sad </h1>
-       <table class="table table-list-search">
-            <thead>
-                <tr>
-                    <th><h3>Name</h3></th>
-                    <th><h3>Status</h3></th>
-                </tr>
-            </thead>
-            <tbody>
-		        {{#each getSad}}
-		        {{> sadPeople}}
-		        {{/each}}
-            </tbody>
-        </table>   
-  </div>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading c-list">
+						<span class="title"> <h4>Normal</h4></span>
+
+					</div>
+
+					<div class="row" style="display: none;">
+						<div class="col-xs-12">
+							<div class="input-group c-search">
+								<input type="text" class="form-control" id="contact-list-search">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<ul class="list-group" id="contact-list">
+						{{#each getNormal}}
+						{{> normalPeople}}
+						{{/each}}                   
+
+					</ul>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading c-list">
+						<span class="title"> <h4>Sad</h4></span>
+
+					</div>
+
+					<div class="row" style="display: none;">
+						<div class="col-xs-12">
+							<div class="input-group c-search">
+								<input type="text" class="form-control" id="contact-list-search">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search text-muted"></span></button>
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<ul class="list-group" id="contact-list">
+						{{#each getSad}}
+						{{> sadPeople}}
+						{{/each}}                   
+
+					</ul>
+				</div>
+			</div>
+	</div>
 </div>
 </template>
 
-<!-- Code below for pulling data from database to populate templates -->
-
 <template name="happyPeople">
-	<tr>
-        <td style="font-size:150%">{{userName}}</td>
-        <div class="dropdown">
-	        <td class="feels dropdown-toggle" data-toggle="dropdown" align="right" style="color: green"> 
-	    		<i class={{emotion}}></i>
-	    	</td>
+	<li class="list-group-item">
 
-			<ul class="dropdown-menu">
+		<div class="col-xs-12 col-sm-3 feels dropdown-toggle" data-toggle="dropdown" style="color: green">
+			<i class="{{emotion}}"></i>
+		</div>
+
+		<ul class="dropdown-menu">
 			    <li align="center"><a href="#"><i class="fa fa-smile-o fa-5x"></i></a></li>
 			    <li align="center"><a href="#"><i class="fa fa-meh-o fa-5x"></i></a></li>
 			    <li align="center"><a href="#"><i class="fa fa-frown-o fa-5x"></i></a></li>
-			</ul>
+		</ul>
+
+		<div class="col-xs-12 col-sm-9">
+			<span class="name">{{userName}}</span><br/>
+			
 		</div>
-    </tr>
+		<div class="clearfix"></div>
+	</li>
+
 </template>
 
 <template name="normalPeople">
-	<tr>
-        <td style="font-size:150%">{{userName}}</td>
-       
-       <div class="dropdown">
-	        <td class="feels dropdown-toggle" data-toggle="dropdown" align="right" style="color: #E6E600"> 
-	    		<i class={{emotion}}></i>
-	    	</td>
+	<li class="list-group-item">
 
-			<ul class="dropdown-menu">
+		<div class="col-xs-12 col-sm-3 feels dropdown-toggle" data-toggle="dropdown" style="color: #E6E600">
+			<i class="{{emotion}}"></i>
+		</div>
+		<ul class="dropdown-menu">
 			    <li align="center"><a href="#"><i class="fa fa-smile-o fa-5x"></i></a></li>
 			    <li align="center"><a href="#"><i class="fa fa-meh-o fa-5x"></i></a></li>
 			    <li align="center"><a href="#"><i class="fa fa-frown-o fa-5x"></i></a></li>
-			</ul>
+		</ul>
+		<div class="col-xs-12 col-sm-9">
+			<span class="name">{{userName}}</span><br/>
+			
 		</div>
-    </tr>
+		<div class="clearfix"></div>
+	</li>
+
 </template>
 
 <template name="sadPeople">
-    <tr>
-    	<td style="font-size:150%">{{userName}}</td>
-        <div class="dropdown">
-	        <td class="feels dropdown-toggle" data-toggle="dropdown" align="right" style="color: red"> 
-	    		<i class={{emotion}}></i>
-	    	</td>
+	<li class="list-group-item">
 
-			<ul class="dropdown-menu">
+		<div class="col-xs-12 col-sm-3 feels dropdown-toggle" data-toggle="dropdown" style="color: red">
+			<i class="{{emotion}}"></i>
+		</div>
+		<ul class="dropdown-menu">
 			    <li align="center"><a href="#"><i class="fa fa-smile-o fa-5x"></i></a></li>
 			    <li align="center"><a href="#"><i class="fa fa-meh-o fa-5x"></i></a></li>
 			    <li align="center"><a href="#"><i class="fa fa-frown-o fa-5x"></i></a></li>
-			</ul>
+		</ul>
+		<div class="col-xs-12 col-sm-9">
+			<span class="name">{{userName}}</span><br/>
+			
 		</div>
-    </tr>
+		<div class="clearfix"></div>
+	</li>
+
 </template>
