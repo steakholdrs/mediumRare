@@ -5,13 +5,13 @@
 
             <div class="widget-header">
                 <i class="icon-th-list"></i>
-                <h3>Capacity</h3>
+                <h3 style="color: white">Capacity</h3>
             </div> <!-- /widget-header -->
 
             <div class="widget-content">
 
                 <table class="table table-striped table-bordered">
-                    <thead>
+                    <thead style="background-color: #e9e9e9">
                     <tr>
                         <th>Name</th>
                         <th>Planned</th>
@@ -35,8 +35,8 @@
 
     <template name="captable">
         <tr>
-            <td>{{name}}</td>
-            <td class="planned">{{planned}}</td>
-            <td class="actual">{{actual}}</td>
+            <td style="background-color: #e9e9e9">{{name}}</td>
+            <td style="background-color: #e9e9e9" class="planned">{{planned}}</td>
+            <td style="background-color: #e9e9e9" class="actual">{{actual}}</td>
         </tr>
     </template>
