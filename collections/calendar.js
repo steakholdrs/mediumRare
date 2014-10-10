@@ -1,0 +1,1 @@
+Carpool_Events = new Meteor.Collection('carpool_event');
