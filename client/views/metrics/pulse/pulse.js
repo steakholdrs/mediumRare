@@ -21,7 +21,10 @@ Template.pulse.events({
 
 Template.pulse.events({
 	'click a' : function(e) {
+		// console.log($(e.target));
+		// console.log($(e.target).__proto__);
 		var tar = e.target.className;
+		// $('.feels').fadeOut('slow');
 		Pulse.update(this._id, {$set: {emotion: tar}});
 	}
 });
