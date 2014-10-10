@@ -30,6 +30,7 @@ Template.canvas.rendered = function(){
       var tblColor = "";
       if (Session.get('movedElementId') == "redPanel") {tblColor="red"}
       else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"}
+      else if (Session.get('movedElementId') == "yellowPanel") {tblColor="yellow"}
       else {tblColor="green"}
       Metrics.insert({grid: this.id, color: tblColor });
       $('#' + Session.get('movedElementId')).css('top', '0');
