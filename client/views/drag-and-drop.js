@@ -29,11 +29,11 @@ Template.canvas.rendered = function(){
       /* change this later, just to start out to test board saving */
       var tblColor = "";
       var metric = "";
-      if (Session.get('movedElementId') == "redPanel") {tblColor="red"; metric="/pulse"}
-      else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"; metric="/capacity"}
-      else if (Session.get('movedElementId') == "yellowPanel") {tblColor="yellow"; metric="/announcements"}
-      else {tblColor="green"; metric="/calendar"}
-      Metrics.insert({grid: this.id, color: tblColor, url: metric });
+      if (Session.get('movedElementId') == "redPanel") {tblColor="red"; metric="pulse"; cap="Pulse"}
+      else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"; metric="capacity"; cap="Capacity"}
+      else if (Session.get('movedElementId') == "yellowPanel") {tblColor="yellow"; metric="announcements"; cap="Announcements"}
+      else {tblColor="green"; metric="calendar"; cap="Calendar"}
+      Metrics.insert({grid: this.id, color: tblColor, url: metric, linkName: cap });
       $('#' + Session.get('movedElementId')).css('top', '0');
       $('#' + Session.get('movedElementId')).css('left', '0');
 

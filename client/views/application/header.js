@@ -20,3 +20,9 @@ Template.header.events({
     }
 
 });
+
+Template.header.helpers({
+    getLinks: function () {
+        return Metrics.find();
+    }
+});
