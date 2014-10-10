@@ -36,25 +36,25 @@ if (Capacity.find().count() === 0) {
 
     Capacity.insert({
         name:"Alex",
-        planned:"80",
-        actual:"80"
+        planned: 80,
+        actual: 80
     });
 
     Capacity.insert({
         name:"Kevin",
-        planned:"80",
-        actual:"50"
+        planned: 80,
+        actual: 50
     });
 
     Capacity.insert({
         name:"Davinder",
-        planned:"80",
-        actual:"70"
+        planned: 80,
+        actual: 70
     });
 
     Capacity.insert({
         name:"Marius",
-        planned:"80",
-        actual:"140"
+        planned: 80,
+        actual: 140
     });
 }

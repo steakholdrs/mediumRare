@@ -4,8 +4,14 @@ Template.capacity.helpers({
     }
 });
 
-Template.capacity.rendered( {
-	
+Template.captable.helpers({
+	color: function() {
+		if (this.actual > this.planned) {
+			return "#EB3333";
+		} else {
+			return "#e9e9e9";
+		}
+	}
 });
 
 /**
