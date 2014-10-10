@@ -30,9 +30,9 @@ Template.canvas.rendered = function(){
       var tblColor = "";
       var metric = "";
       if (Session.get('movedElementId') == "redPanel") {tblColor="red"; metric="pulse"; cap="Pulse"}
-      else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"; metric="capacity"; cap="Capacity"}
-      else if (Session.get('movedElementId') == "yellowPanel") {tblColor="yellow"; metric="announcements"; cap="Announcements"}
-      else {tblColor="green"; metric="calendar"; cap="Calendar"}
+      else if (Session.get('movedElementId') == "greenPanel") {tblColor="green"; metric="capacity"; cap="Capacity"}
+      else if (Session.get('movedElementId') == "bluePanel") {tblColor="blue"; metric="announcements"; cap="Announcements"}
+      else {tblColor="yellow"; metric="calendar"; cap="Calendar"}
       Metrics.insert({grid: this.id, color: tblColor, url: metric, linkName: cap });
       $('#' + Session.get('movedElementId')).css('top', '0');
       $('#' + Session.get('movedElementId')).css('left', '0');
